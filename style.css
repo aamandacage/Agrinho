@@ -50,90 +50,98 @@ nav a:hover {
 .text-content {
   max-width: 800px;
   margin: 0 auto;
+}
+
+.box-com-borda {
   border: 2px solid #b57edc;
   border-radius: 10px;
   padding: 20px;
-  background-color: #ffffff;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
 }
 
-.text-content:hover {
+.box-com-borda:hover {
   transform: scale(1.02);
 }
 
-.sobre-imagem {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 15px auto 25px auto;
+.imagem-sobre {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(181, 126, 220, 0.4);
-}
-
-/* Seção impacto */
-.impact-section {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  color: #4a235a;
-  border: 2px solid #7a49a8; /* borda roxa */
-  border-radius: 8px;
-  padding: 25px 20px;
-  background-color: #ffffff;
-}
-
-.impact-section h3 {
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-bottom: 8px;
-}
-
-.impact-subtitle {
-  font-style: italic;
-  font-size: 1rem;
-  margin-top: 0;
   margin-bottom: 20px;
 }
 
-/* Botões dentro da borda */
+.impact-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.titulo-com-borda {
+  border: 2px solid #b57edc;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.impact-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #555;
+}
+
 .botoes-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .botao {
-  background-color: #b57edc;
-  color: white;
+  padding: 10px 20px;
+  background-color: #d8b3e6;
   border: none;
-  padding: 12px 22px;
-  font-size: 1rem;
+  border-radius: 25px;
+  color: #4a235a;
   font-weight: bold;
-  border-radius: 15px;
   cursor: pointer;
-  transition: background-color 0.4s ease;
-  box-shadow: 0 2px 6px rgba(181, 126, 220, 0.5);
-  min-width: 150px;
-  text-align: center;
-  white-space: nowrap;
+  transition: background-color 0.4s, transform 0.3s;
 }
 
 .botao:hover {
-  animation: piscar-roxo 1s infinite alternate;
+  background-color: #a065c2;
+  transform: scale(1.07);
+  color: white;
 }
 
-@keyframes piscar-roxo {
-  0% {
-    background-color: #b57edc;
-  }
-  50% {
-    background-color: #a266c4;
-  }
-  100% {
-    background-color: #b57edc;
-  }
+.subtitulos {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.topico h4 {
+  color: #4a235a;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  border-left: 5px solid #b57edc;
+  padding-left: 10px;
+}
+
+.topico p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+  text-align: justify;
+}
+
+.topico ul {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  color: #333;
 }
 
 .extra-images {
