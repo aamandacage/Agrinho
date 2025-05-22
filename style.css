@@ -50,10 +50,15 @@ nav a:hover {
 .text-content {
   max-width: 800px;
   margin: 0 auto;
-  border: 2px solid #4a235a;
+  border: 2px solid #b57edc;
   border-radius: 10px;
   padding: 20px;
   background-color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.text-content:hover {
+  transform: scale(1.02);
 }
 
 .extra-images {
