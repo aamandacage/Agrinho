@@ -52,96 +52,75 @@ nav a:hover {
   margin: 0 auto;
 }
 
-.box-com-borda {
-  border: 2px solid #b57edc;
-  border-radius: 10px;
+/* Borda com hover para a área "Sobre o Tema" */
+.borda-com-hover {
+  border: 2px solid #4a235a;
   padding: 20px;
-  transition: transform 0.3s;
-}
-
-.box-com-borda:hover {
-  transform: scale(1.02);
-}
-
-.imagem-sobre {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.impact-section {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.titulo-com-borda {
-  border: 2px solid #b57edc;
   border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  margin-bottom: 10px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.impact-subtitle {
-  text-align: center;
-  font-size: 1rem;
-  margin-bottom: 25px;
-  color: #555;
+.borda-com-hover:hover {
+  transform: scale(1.02);
+  border-color: #8e44ad;
 }
 
-.botoes-section {
+.borda-com-hover img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.subtitulo-com-borda {
+  border: 2px solid #4a235a;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f4e6ff;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Botões centralizados com estilo */
+.botoes-centralizados {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin-bottom: 30px;
+  margin: 20px 0;
 }
 
-.botao {
-  padding: 10px 20px;
+.botoes-centralizados button {
   background-color: #d8b3e6;
-  border: none;
-  border-radius: 25px;
   color: #4a235a;
+  border: 2px solid #4a235a;
+  border-radius: 25px;
+  padding: 10px 20px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.4s, transform 0.3s;
+  transition: all 0.3s ease;
 }
 
-.botao:hover {
-  background-color: #a065c2;
-  transform: scale(1.07);
-  color: white;
+.botoes-centralizados button:hover {
+  background-color: #c29ddf;
+  animation: blink 1s step-start infinite;
 }
 
-.subtitulos {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+@keyframes blink {
+  50% {
+    background-color: #a569bd;
+  }
 }
 
-.topico h4 {
+/* Textos explicativos */
+.conteudos-explicativos h4 {
+  margin-top: 25px;
   color: #4a235a;
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-  border-left: 5px solid #b57edc;
-  padding-left: 10px;
 }
 
-.topico p {
-  margin: 0;
-  font-size: 1rem;
-  color: #333;
+.conteudos-explicativos p {
   text-align: justify;
-}
-
-.topico ul {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  padding-left: 20px;
-  color: #333;
+  line-height: 1.6;
 }
 
 .extra-images {
@@ -167,6 +146,7 @@ footer {
   margin-top: 30px;
 }
 
+/* Botão flutuante para voltar ao topo */
 .voltar-topo {
   position: fixed;
   right: 15px;
@@ -178,7 +158,6 @@ footer {
   text-decoration: none;
   font-weight: bold;
   border: 1px solid white;
-  display: none;
   transition: background-color 0.3s;
   z-index: 999;
 }
