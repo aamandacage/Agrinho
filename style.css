@@ -45,6 +45,8 @@ nav a:hover {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .text-content {
@@ -52,75 +54,102 @@ nav a:hover {
   margin: 0 auto;
 }
 
-/* Borda com hover para a área "Sobre o Tema" */
 .borda-com-hover {
-  border: 2px solid #4a235a;
-  padding: 20px;
+  border: 2px solid #6a329f;
   border-radius: 10px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: border-color 0.4s ease, transform 0.3s ease;
 }
 
 .borda-com-hover:hover {
-  transform: scale(1.02);
-  border-color: #8e44ad;
+  border-color: #9e6fff;
+  transform: scale(1.03);
 }
 
 .borda-com-hover img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 15px;
+  max-width: 150px;
+  border-radius: 8px;
+  flex-shrink: 0;
 }
 
 .subtitulo-com-borda {
-  border: 2px solid #4a235a;
-  padding: 10px;
+  border: 2px solid #6a329f;
   border-radius: 10px;
-  background-color: #f4e6ff;
-  margin-top: 30px;
-  text-align: center;
+  padding: 10px 15px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #4a235a;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Botões centralizados com estilo */
 .botoes-centralizados {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  margin: 20px 0;
+}
+
+/* Ajustes para os 5 botões: 3 na primeira linha, 2 na segunda, centralizados */
+.botoes-centralizados button:nth-child(4) {
+  grid-column: 2 / 3;
+}
+
+.botoes-centralizados button:nth-child(5) {
+  grid-column: 3 / 4;
 }
 
 .botoes-centralizados button {
-  background-color: #d8b3e6;
+  background-color: #b57edc;
+  border: none;
   color: #4a235a;
-  border: 2px solid #4a235a;
+  padding: 12px 20px;
   border-radius: 25px;
-  padding: 10px 20px;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.4s ease, box-shadow 0.6s ease;
+  width: 150px;
+  max-width: 100%;
 }
 
 .botoes-centralizados button:hover {
-  background-color: #c29ddf;
-  animation: blink 1s step-start infinite;
+  background-color: #7b47b5;
+  animation: piscar 1.2s infinite;
+  color: white;
+  box-shadow: 0 0 12px #9e6fff;
 }
 
-@keyframes blink {
-  50% {
-    background-color: #a569bd;
-  }
+@keyframes piscar {
+  0%, 100% { background-color: #7b47b5; }
+  50% { background-color: #9e6fff; }
 }
 
-/* Textos explicativos */
-.conteudos-explicativos h4 {
-  margin-top: 25px;
+/* Aqui está a separação: o bloco com a borda do título e botões NÃO engloba esse container */
+.conteudos-explicativos {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f4f0f8;
+  border: 1px solid #d8b3e6;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
   color: #4a235a;
+  line-height: 1.6;
 }
 
-.conteudos-explicativos p {
-  text-align: justify;
-  line-height: 1.6;
+.conteudos-explicativos h4 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #6a329f;
 }
 
 .extra-images {
@@ -158,6 +187,7 @@ footer {
   text-decoration: none;
   font-weight: bold;
   border: 1px solid white;
+  display: block;
   transition: background-color 0.3s;
   z-index: 999;
 }
