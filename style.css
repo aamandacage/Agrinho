@@ -1,203 +1,98 @@
-/* Reset básico e fontes */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
-  color: #333;
-  line-height: 1.6;
+  box-sizing: border-box;
 }
 
-header {
-  background-color: purple;
-  color: white;
-  padding: 20px 0;
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+header h1 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 nav {
-  background-color: #7b4ca5;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 12px 0;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 nav a {
-  color: white;
+  color: #6a0dad;
   text-decoration: none;
+  margin: 0 15px;
   font-weight: bold;
   font-size: 1.1em;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #d291e4;
+  color: #9a56ff;
 }
 
+/* Container */
 .container {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 15px;
 }
 
-/* Borda menor para "Sobre o Tema" com título dentro da borda */
-.borda-com-hover {
+/* Borda do Sobre o Tema */
+.borda-sobre-tema {
+  border: 2px solid #6a0dad;
+  padding: 15px 20px 25px 20px;
+  border-radius: 10px;
+  max-width: 720px;
+  margin: 0 auto 40px auto;
   position: relative;
-  border: 2px solid purple;
-  border-radius: 15px;
-  padding: 20px 25px 25px 25px;
-  max-width: 800px;
-  margin: 30px auto;
-  background-color: #fff;
+  background: #f9f5ff;
 }
 
-.borda-com-hover h2 {
+.titulo-borda {
   position: absolute;
-  top: -16px;
+  top: -14px;
   left: 20px;
-  background-color: #fff;
-  padding: 0 12px;
-  color: purple;
+  background: #f9f5ff;
+  color: #6a0dad;
+  padding: 0 10px;
   font-weight: 700;
   font-size: 1.5em;
-  margin: 0;
 }
 
-/* Imagem dentro da borda sobre o tema */
-.borda-com-hover img {
-  float: left;
-  width: 180px;
-  height: auto;
-  margin-right: 20px;
+/* Imagem no Sobre o Tema */
+.borda-sobre-tema img {
+  width: 100%;
+  max-width: 680px;
+  display: block;
+  margin: 10px auto 20px auto;
+  border-radius: 8px;
+}
+
+/* Borda para o título impacto + botões */
+.borda-titulo-botoes {
+  border: 2px solid #6a0dad;
+  padding: 15px 20px 30px 20px;
   border-radius: 10px;
-}
-
-/* Borda maior para o título do impacto + frase + botões */
-.subtitulo-com-borda {
-  max-width: 900px;
-  margin: 40px auto 30px;
-  border: 3px solid purple;
-  border-radius: 20px;
-  padding: 25px 30px 40px 30px;
-  color: purple;
-  font-weight: 700;
-  font-size: 1.7em;
+  max-width: 720px;
+  margin: 0 auto 35px auto;
+  background: #f9f5ff;
   text-align: center;
-  background-color: #fff;
-  position: relative;
 }
 
+/* Subtítulo com itálico */
 .subtitulo-com-borda em {
   display: block;
   font-style: italic;
-  font-weight: 400;
+  font-weight: normal;
+  margin-top: 8px;
   font-size: 1em;
-  margin-top: 20px;
-  margin-bottom: 40px; /* espaço maior entre frase e botões */
-  color: #6a0dad;
+  color: #5b3e99;
 }
 
-/* Botões centralizados dentro da borda maior */
-.botoes-centralizados {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin-top: 0;
-}
-
-.botoes-centralizados button {
-  background-color: #7b4ca5;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 12px 28px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.botoes-centralizados button:hover {
-  background-color: #9b59b6;
-  animation: piscar 1.2s infinite;
-}
-
-/* Animação de piscar para hover dos botões */
-@keyframes piscar {
-  0%, 100% { background-color: #9b59b6; }
-  50% { background-color: #7b4ca5; }
-}
-
-/* Conteúdos explicativos fora das bordas */
-.conteudos-explicativos {
-  max-width: 900px;
-  margin: 20px auto 60px;
-  color: #333;
-  font-size: 1.1em;
-  line-height: 1.55;
-}
-
-/* Borda oval com brilho roxo para subtítulos e parágrafos */
-.conteudos-explicativos h4,
-.conteudos-explicativos p {
-  border: 2px solid purple;
-  border-radius: 40px;
-  padding: 12px 20px;
-  margin-top: 20px;
-  transition: box-shadow 0.6s ease;
-  position: relative;
-  background-color: #fff;
-}
-
-.conteudos-explicativos h4 {
-  font-weight: 700;
-  color: #7b4ca5;
-}
-
-/* Efeito de glitter roxo no hover */
-.conteudos-explicativos h4:hover,
-.conteudos-explicativos p:hover {
-  box-shadow:
-    0 0 10px 2px #b19cd9,
-    0 0 20px 4px #8e44ad,
-    0 0 30px 6px #9b59b6,
-    0 0 40px 8px #d291e4;
-  cursor: pointer;
-}
-
-/* Galeria imagens */
-.extra-images {
-  max-width: 900px;
-  margin: 0 auto 50px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.extra-images img {
-  max-width: 180px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #ccc;
-}
-
-/* Botão voltar ao topo */
-.voltar-topo {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  background-color: purple;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.2em;
-  opacity: 0.85;
-  transition: opacity 0.3s ease;
-  z-index: 1000;
-}
-
-.voltar-topo:hover {
-  opacity: 1;
-}
+/* Botões estilo links */
+.botoes-central
