@@ -61,6 +61,16 @@ nav a:hover {
   transform: scale(1.02);
 }
 
+/* Nova classe para a imagem dentro do Sobre o Tema */
+.sobre-imagem {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 15px auto 25px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(181, 126, 220, 0.4);
+}
+
 .extra-images {
   display: flex;
   flex-wrap: wrap;
