@@ -70,12 +70,15 @@ nav a:hover {
   box-shadow: 0 2px 8px rgba(181, 126, 220, 0.4);
 }
 
-/* Nova seção impacto */
+/* Seção impacto */
 .impact-section {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
   color: #4a235a;
+  border: 2px solid #7a49a8; /* borda roxa */
+  border-radius: 8px;
+  padding: 15px 20px;
 }
 
 .impact-section h3 {
@@ -88,6 +91,55 @@ nav a:hover {
   font-style: italic;
   font-size: 1rem;
   margin-top: 0;
+}
+
+/* Seção botões */
+.botoes-section {
+  max-width: 800px;
+  margin: 30px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.botoes-row {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  width: 100%;
+}
+
+.botao {
+  background-color: #b57edc;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  box-shadow: 0 2px 6px rgba(181, 126, 220, 0.5);
+  min-width: 150px;
+  text-align: center;
+}
+
+.botao:hover {
+  animation: piscar-roxo 1s infinite alternate;
+}
+
+/* Animação de "piscar" suave */
+@keyframes piscar-roxo {
+  0% {
+    background-color: #b57edc;
+  }
+  50% {
+    background-color: #7a49a8; /* tom roxo mais escuro */
+  }
+  100% {
+    background-color: #b57edc;
+  }
 }
 
 .extra-images {
