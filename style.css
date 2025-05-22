@@ -1,4 +1,47 @@
-/* Borda pequena para "Sobre o Tema" */
+/* Reset básico e fontes */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: purple;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+nav {
+  background-color: #7b4ca5;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 12px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #d291e4;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* Borda menor para "Sobre o Tema" com título dentro da borda */
 .borda-com-hover {
   position: relative;
   border: 2px solid purple;
@@ -11,13 +54,14 @@
 
 .borda-com-hover h2 {
   position: absolute;
-  top: -15px;
+  top: -16px;
   left: 20px;
   background-color: #fff;
-  padding: 0 10px;
+  padding: 0 12px;
   color: purple;
   font-weight: 700;
   font-size: 1.5em;
+  margin: 0;
 }
 
 /* Imagem dentro da borda sobre o tema */
@@ -29,7 +73,7 @@
   border-radius: 10px;
 }
 
-/* Borda maior para o título e botões */
+/* Borda maior para o título do impacto + frase + botões */
 .subtitulo-com-borda {
   max-width: 900px;
   margin: 40px auto 30px;
@@ -49,8 +93,8 @@
   font-style: italic;
   font-weight: 400;
   font-size: 1em;
-  margin-top: 15px;
-  margin-bottom: 35px; /* maior espaço entre frase e botões */
+  margin-top: 20px;
+  margin-bottom: 40px; /* espaço maior entre frase e botões */
   color: #6a0dad;
 }
 
@@ -94,11 +138,47 @@
   line-height: 1.55;
 }
 
+/* Borda oval com brilho roxo para subtítulos e parágrafos */
+.conteudos-explicativos h4,
+.conteudos-explicativos p {
+  border: 2px solid purple;
+  border-radius: 40px;
+  padding: 12px 20px;
+  margin-top: 20px;
+  transition: box-shadow 0.6s ease;
+  position: relative;
+  background-color: #fff;
+}
+
 .conteudos-explicativos h4 {
-  margin-top: 25px;
-  margin-bottom: 8px;
   font-weight: 700;
   color: #7b4ca5;
+}
+
+/* Efeito de glitter roxo no hover */
+.conteudos-explicativos h4:hover,
+.conteudos-explicativos p:hover {
+  box-shadow:
+    0 0 10px 2px #b19cd9,
+    0 0 20px 4px #8e44ad,
+    0 0 30px 6px #9b59b6,
+    0 0 40px 8px #d291e4;
+  cursor: pointer;
+}
+
+/* Galeria imagens */
+.extra-images {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.extra-images img {
+  max-width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
 }
 
 /* Botão voltar ao topo */
