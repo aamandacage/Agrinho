@@ -76,7 +76,7 @@ nav a:hover {
   margin: 0 auto;
   text-align: center;
   color: #4a235a;
-  border: 2px solid #7a49a8; /* borda roxa */
+  border: 2px solid #7a49a8;
   border-radius: 8px;
   padding: 25px 20px;
   background-color: #ffffff;
@@ -95,7 +95,6 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
-/* Botões dentro da borda */
 .botoes-section {
   display: flex;
   flex-wrap: wrap;
@@ -125,15 +124,34 @@ nav a:hover {
 }
 
 @keyframes piscar-roxo {
-  0% {
-    background-color: #b57edc;
-  }
-  50% {
-    background-color: #a266c4;
-  }
-  100% {
-    background-color: #b57edc;
-  }
+  0% { background-color: #b57edc; }
+  50% { background-color: #a266c4; }
+  100% { background-color: #b57edc; }
+}
+
+/* Blocos de texto explicativo */
+.bloco-texto {
+  background-color: #7a49a8;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 25px;
+  box-shadow: 0 4px 10px rgba(74, 35, 90, 0.3);
+  text-align: left;
+}
+
+.bloco-texto h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bloco-texto p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .extra-images {
@@ -172,6 +190,7 @@ footer {
   border: 1px solid white;
   transition: background-color 0.3s;
   z-index: 999;
+  display: inline-block;
 }
 
 .voltar-topo:hover {
