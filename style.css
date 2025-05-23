@@ -136,7 +136,7 @@ nav a:hover {
   color: #fff;
   padding: 25px 20px;
   border-radius: 8px;
-  margin-top: 25px;
+  margin: 25px auto; /* adiciona espaçamento acima e abaixo + centraliza */
   box-shadow: 0 4px 10px rgba(74, 35, 90, 0.3);
   text-align: left;
 }
