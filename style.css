@@ -131,6 +131,7 @@ nav a:hover {
 
 /* Blocos de texto explicativo */
 .bloco-texto {
+  max-width: 800px;
   background-color: #7a49a8;
   color: #fff;
   padding: 20px;
