@@ -134,11 +134,11 @@ nav a:hover {
   max-width: 800px;
   background-color: #7a49a8;
   color: #fff;
-  padding: 20px;
-  border-radius: 6px;
+  padding: 25px 20px;
+  border-radius: 8px;
   margin-top: 25px;
   box-shadow: 0 4px 10px rgba(74, 35, 90, 0.3);
-  text-align: center;
+  text-align: left;
 }
 
 .bloco-texto h4 {
